@@ -29,7 +29,11 @@ public class Main {
         double totalWTip = totalTip + total;
         System.out.println("Total bill with tip: $" + totalWTip);
         double perBefore = total / numPeople;
-        System.out.println("Per person cost before tip: $");
+        System.out.println("Per person cost before tip: $" + perBefore);
+        double perTip = totalTip / numPeople;
+        System.out.println("Tip per person: $" + perTip);
+        double perTotal = (totalTip + total) / numPeople;
+        System.out.println("Total cost per person: $" + perTotal);
 
     }
 }
