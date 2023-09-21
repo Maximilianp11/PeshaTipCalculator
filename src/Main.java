@@ -23,18 +23,18 @@ public class Main {
 
         total += 1;
         System.out.println("----------------------------------");
-        System.out.println("Total bill before tip: $" + total);
+        System.out.println("Total bill before tip: $" + String.format("%.2f" , total));
         System.out.println("Tip percentage: " + (int) tipPercent + "%");
         double totalTip = (tipPercent / 100 * total);
-        System.out.println("Total tip: $" + totalTip);
+        System.out.println("Total tip: $" + String.format("%.2f" , totalTip));
         double totalWTip = totalTip + total;
-        System.out.println("Total bill with tip: $" + totalWTip);
+        System.out.println("Total bill with tip: $" + String.format("%.2f" , totalWTip));
         double perBefore = total / numPeople;
-        System.out.println("Per person cost before tip: $" + perBefore);
+        System.out.println("Per person cost before tip: $" + String.format("%.2f" , perBefore));
         double perTip = totalTip / numPeople;
-        System.out.println("Tip per person: $" + perTip);
+        System.out.println("Tip per person: $" + String.format("%.2f" , perTip));
         double perTotal = (totalTip + total) / numPeople;
-        System.out.println("Total cost per person: $" + perTotal);
+        System.out.println("Total cost per person: $" + String.format("%.2f" , perTotal));
 
     }
 }
