@@ -7,7 +7,7 @@ public class Main {
         int numPeople = scan.nextInt();
         scan.nextLine();
         System.out.println("What is the tip percentage? (0-100): ");
-        int tipPercent = scan.nextInt();
+        double tipPercent = scan.nextInt();
         scan.nextLine();
         double item = 0;
         double total = 0;
@@ -21,7 +21,15 @@ public class Main {
             scan.nextLine();
             }
 
-        System.out.println("test");
-        System.out.println(total);
+        total += 1;
+        System.out.println("Total bill before tip: $" + total);
+        System.out.println("Tip percentage: " + tipPercent);
+        double totalTip = (tipPercent / 100 * total);
+        System.out.println("Total tip: $" + totalTip);
+        double totalWTip = totalTip + total;
+        System.out.println("Total bill with tip: $" + totalWTip);
+        double perBefore = total / numPeople;
+        System.out.println("Per person cost before tip: $");
+
     }
 }
