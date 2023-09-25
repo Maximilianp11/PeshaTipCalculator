@@ -6,9 +6,15 @@ public class Main {
         System.out.println("How many people are in your group: ");
         int numPeople = scan.nextInt();
         scan.nextLine();
-        System.out.println("What is the tip percentage? (0-100): ");
-        double tipPercent = scan.nextInt();
-        scan.nextLine();
+        double tipPercent = 0;
+        if (numPeople >= 6) {
+            tipPercent = 25;
+        }
+        else {
+            System.out.println("What is the tip percentage? (0-100): ");
+            tipPercent = scan.nextInt();
+            scan.nextLine();
+        }
         double item = 0;
         double total = 0;
 
